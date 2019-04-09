@@ -9,7 +9,6 @@ class Anuncio extends Component {
                 anuncio: {},
                 isLoading: true
             }
-
             const id = this.props.match.params.idAnuncio
             const url = `https://mercadodev-042019.firebaseio.com/anuncios/${id}.json`
             axios
