@@ -30,7 +30,7 @@ const Categorias = (props) => {
                         </ul>
                     </div> 
                     <div className="col-lg-8">
-                        <Route path='/categorias/:urlCategoria' /*exact*/ component={Categoria} />    
+                        <Route path='/categorias/:urlCategoria' exact component={Categoria} />    
                         <Route path='/categorias/:urlCategoria/:idAnuncio' render={(props) => <Anuncio {...props} />} />
                     </div>
                 </div>

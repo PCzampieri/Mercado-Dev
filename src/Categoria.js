@@ -15,7 +15,7 @@ class Categoria extends Component {
         
         this.loadAnuncios = this.loadAnuncios.bind(this)
 
-        this.loadAnuncios()
+        this.loadAnuncios(this.props.match.params.urlCategoria)
     }
     loadAnuncios(urlCategoria){
         this.setState({ 

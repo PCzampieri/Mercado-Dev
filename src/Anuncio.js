@@ -28,7 +28,12 @@ class Anuncio extends Component {
         return(
             <div>
                 <h1>{anuncio.nome}</h1>
-                <p><img src={anuncio.foto} /></p>                
+                <p><img src={anuncio.foto} /></p> 
+                <h4>{anuncio.descricao}</h4>
+                <h5>{anuncio.preco}</h5>
+                <h5>Vendedor: {anuncio.vendedor}</h5>
+                <h5>Telefone: {anuncio.telefone}</h5>
+
             </div>
         )
     }

@@ -30,6 +30,7 @@ class NovoAnuncio extends Component {
                         foto: result,
                         categoria: this.categoria.value
                     }
+                    console.log(novoAnuncio)
                     base.push('anuncios', {
                         data: novoAnuncio
                     })
@@ -49,14 +50,10 @@ class NovoAnuncio extends Component {
                 <HeaderInterno />
                 <div className='container' style={{paddingTop: '120px'}}>
                     <h1>Novo anúncio</h1>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit}>                      
                         <div className='form-group'>
                             <label htmlFor='nome'>Foto</label>
                             <input type='file' className='form-control' id='foto' placeholder='Nome' ref={(ref) => this.foto = ref }/>
-                        </div>
-                        <div className='form-group'>
-                            <label htmlFor='nome'>Nome</label>
-                            <input type='text' className='form-control' id='nome' placeholder='Nome' ref={(ref) => this.nome = ref }/>
                         </div>
                         <div className='form-group'>
                             <label className='mr-2' htmlFor='nome'>Categorias</label>
@@ -68,23 +65,42 @@ class NovoAnuncio extends Component {
                                         </option>)
                                 }
                             </select>
-                        </div>
-                        <div className='form-group'>
-                            <label htmlFor='descricao'>Descrição</label>
-                            <input type='text' className='form-control' id='descricao' placeholder='Descrição' ref={(ref) => this.descricao = ref }/>
-                        </div>
-                        <div className='form-group'>
-                            <label htmlFor='preco' >Preço</label>
-                            <input type='text' className='form-control' id='preco' placeholder='Preço' ref={(ref) => this.preco = ref }/>
-                        </div>
-                        <div className='form-group'>
-                            <label htmlFor='telefone' >Telefone</label>
-                            <input type='text' className='form-control' id='telefone' placeholder='Telefone' ref={(ref) => this.telefone = ref }/>
-                        </div>
-                        <div className='form-group'>
-                            <label htmlFor='vendedor' >Vendedor</label>
-                            <input type='text' className='form-control' id='vendedor' placeholder='Vendedor' ref={(ref) => this.vendedor = ref }/>
-                        </div>
+                        </div>                                             
+                        <div className="row">
+                            <div className="col-6">                        
+                                <div className='form-group'>
+                                    <label htmlFor='nome'>Nome</label>
+                                    <input type='text' className='form-control' id='nome' placeholder='Nome' ref={(ref) => this.nome = ref }/>
+                                </div>
+                                
+                            </div>                        
+                            <div className="col-6">          
+                                <div className='form-group'>
+                                    <label htmlFor='descricao'>Descrição</label>
+                                    <input type='text' className='form-control' id='descricao' placeholder='Descrição' ref={(ref) => this.descricao = ref }/>
+                                </div>
+                            </div>                                
+                        </div>  
+                        <div className="row">
+                            <div className="col-3">
+                                <div className='form-group'>
+                                    <label htmlFor='preco' >Preço</label>
+                                    <input type='text' className='form-control' id='preco' placeholder='Preço' ref={(ref) => this.preco = ref }/>
+                                </div>
+                            </div>
+                            <div className="col-3">
+                                <div className='form-group'>
+                                    <label htmlFor='telefone' >Telefone</label>
+                                    <input type='text' className='form-control' id='telefone' placeholder='Telefone' ref={(ref) => this.telefone = ref }/>
+                                </div>
+                            </div>
+                            <div className="col-6">
+                                <div className='form-group'>
+                                    <label htmlFor='vendedor' >Vendedor</label>
+                                    <input type='text' className='form-control' id='vendedor' placeholder='Vendedor' ref={(ref) => this.vendedor = ref }/>
+                                </div>
+                            </div>
+                        </div>                      
                         <button type='submit' className='btn btn-primary'>Salvar</button>
                     </form>
                 </div>            

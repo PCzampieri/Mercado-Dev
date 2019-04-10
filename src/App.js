@@ -24,7 +24,7 @@ class App extends Component {
     
     return (
       <Router>
-        <div className="App">
+        <div className="App">          
           <Route path='/' exact render={() => <Home categorias={this.state.categorias} />} />
           <Route path='/novo-anuncio' exact render={()=> <NovoAnuncio categorias={this.state.categorias}  />} />            
           <Route path='/categorias' render={() => <Categorias
